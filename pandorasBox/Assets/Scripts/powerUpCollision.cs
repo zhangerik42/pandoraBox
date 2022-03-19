@@ -9,6 +9,14 @@ public class powerUpCollision : MonoBehaviour
         Destroy(this.gameObject);
         // OMEGAA SPAGHETTI
         // when this powerup is attained, go to the colliding game object and turn off its darkness
-        collision.gameObject.GetComponent<Player>().shineLight();
+        if(this.CompareTag("lightPowerup"))
+        {
+            collision.gameObject.GetComponent<recognizeSensorInput>().lightActive = true;
+        }
+        if(this.CompareTag("firePowerup"))
+        {
+            Debug.Log("COLLIDING FLAME");
+            collision.gameObject.GetComponent<recognizeSensorInput>().fireBreathActive = true;
+        }
     }
 }
