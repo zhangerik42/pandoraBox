@@ -34,7 +34,6 @@ public class PlayerMove : MonoBehaviour
         {
             Vector3 tempVect = new Vector3(h, v, 0);
             tempVect = tempVect.normalized * speed * Time.deltaTime;
-            Debug.Log(tempVect);
             rb.MovePosition(rb.transform.position + tempVect);
         }
     }
