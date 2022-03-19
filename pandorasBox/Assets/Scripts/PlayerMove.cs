@@ -15,11 +15,15 @@ public class PlayerMove : MonoBehaviour
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
-        // if moving left, flip character
-        while(h < 0)
+        // if moving right, flip character
+        if(h > 0)
         {
-            Debug.Log("flip");
             sr.flipX = true;
+        }
+
+        if(h < 0)
+        {
+            sr.flipX = false;
         }
 
         if (h == 0 && v == 0)
