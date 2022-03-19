@@ -29,6 +29,7 @@ public class recognizeSensorInput : MonoBehaviour
         if (fireBreathActive)
         {
             fireBreath.SetActive(true);
+            //this.GetComponent<SpriteRenderer>().sprite = fireBreathSprite;
         }
     }
 }

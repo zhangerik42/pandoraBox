@@ -19,6 +19,7 @@ public class PlayerMove : MonoBehaviour
         if(h > 0)
         {
             sr.flipX = true;
+            gameObject.GetComponentInChildren<SpriteRenderer>().flipX = true;
         }
 
         if(h < 0)
