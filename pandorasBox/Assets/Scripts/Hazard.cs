@@ -8,6 +8,9 @@ public class Hazard : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         // play death sound?
-        SceneManager.LoadScene(sceneName: "deathScreen");
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(sceneName: "deathScreen");
+        }
     }
 }

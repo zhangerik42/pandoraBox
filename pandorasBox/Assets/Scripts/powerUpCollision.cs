@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class powerUpCollision : MonoBehaviour
 {
+
     private void OnCollisionEnter2D(Collision2D collision){
         //destroy this object when it collides w the player
         Destroy(this.gameObject);
@@ -15,7 +16,6 @@ public class powerUpCollision : MonoBehaviour
         }
         if(this.CompareTag("firePowerup"))
         {
-            Debug.Log("COLLIDING FLAME");
             collision.gameObject.GetComponent<recognizeSensorInput>().fireBreathActive = true;
         }
     }
