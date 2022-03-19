@@ -9,15 +9,22 @@ public class LevelChange: MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (this.gameObject.name == "door2")
-        //destroy this object when it collides w the player{
         {
             SceneManager.LoadScene(sceneName: "level2");
         }
         if (this.gameObject.name == "door3")
-        //destroy this object when it collides w the player{
         {
             SceneManager.LoadScene(sceneName: "level3");
         }
+        if (this.gameObject.name == "doorFinal")
+        {
+            Invoke("finalLevel", 2);
+        }
+    }
+
+    private void finalLevel()
+    {
+        SceneManager.LoadScene(sceneName: "victory");
     }
 }
 

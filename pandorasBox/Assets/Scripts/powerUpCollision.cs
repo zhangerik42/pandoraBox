@@ -16,7 +16,7 @@ public class powerUpCollision : MonoBehaviour
         }
         if(this.CompareTag("firePowerup"))
         {
-            collision.gameObject.GetComponent<recognizeSensorInput>().fireBreathActive = true;
+            collision.gameObject.GetComponent<recognizeSensorInput>().flameOn = true;
         }
     }
 }

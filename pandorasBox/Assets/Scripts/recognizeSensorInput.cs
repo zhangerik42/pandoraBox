@@ -5,7 +5,7 @@ using UnityEngine;
 public class recognizeSensorInput : MonoBehaviour
 {
     public bool lightActive;
-    public bool fireBreathActive;
+    public bool flameOn;
 
     public GameObject darkness;
     public GameObject fireBreath;
@@ -15,7 +15,7 @@ public class recognizeSensorInput : MonoBehaviour
     {
         darkness.SetActive(true);
         lightActive = false;
-        fireBreathActive = false;
+        flameOn = false;
     }
 
     // Update is called once per frame
@@ -26,7 +26,7 @@ public class recognizeSensorInput : MonoBehaviour
             darkness.SetActive(false);
         }
 
-        if (fireBreathActive)
+        if (flameOn)
         {
             fireBreath.SetActive(true);
             //this.GetComponent<SpriteRenderer>().sprite = fireBreathSprite;
