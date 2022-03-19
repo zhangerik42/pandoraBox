@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class CollisionScript : MonoBehaviour
 {
-    bool isCollided =  false;
-
     private void OnCollisionEnter2D(Collision2D collision){
         //Detsroys object that collides with
-        //the object that this script is attached to
+        //the obt that this script is attached tojec
         Destroy(collision.GameObject);
     }
 
@@ -16,11 +14,5 @@ public class CollisionScript : MonoBehaviour
     void Update()
     {
 
-        if(isCollided == true)
-        {
-            //destroy the powerup
-            
-            Destroy(this);
-        }
     }
 }
