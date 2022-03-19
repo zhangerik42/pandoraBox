@@ -6,6 +6,7 @@ public class recognizeSensorInput : MonoBehaviour
 {
     public bool lightActive;
     public GameObject light;
+    //
     // Start is called before the first frame update
     void Start()
     {
