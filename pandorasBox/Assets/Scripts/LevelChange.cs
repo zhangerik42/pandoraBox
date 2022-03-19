@@ -11,7 +11,6 @@ public class LevelChange: MonoBehaviour
         if (this.gameObject.name == "door2")
         //destroy this object when it collides w the player{
         {
-            Debug.Log("auibfiojasbfudioabijf");
             SceneManager.LoadScene(sceneName: "level2");
         }
         if (this.gameObject.name == "door3")

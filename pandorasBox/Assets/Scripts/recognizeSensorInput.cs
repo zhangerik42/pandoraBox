@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class recognizeSensorInput : MonoBehaviour
 {
-    public bool lightActive;
-    public GameObject light;
+    public bool darknessActive;
+    public GameObject darkness;
     //
     // Start is called before the first frame update
     void Start()
     {
-        lightActive = false;
+        darknessActive = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        light.SetActive(lightActive);
+        if (!darknessActive)
+        {
+            darkness.SetActive(false);
+        }
     }
 }
